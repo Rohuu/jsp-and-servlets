@@ -7,6 +7,6 @@
 </servlet>
 <servlet-mapping> 
 <servlet-name>xmlServlet</servlet-name>
-<url-pattern>/xmlServletPath</url-pattern>
+<url-pattern>/XmlServlet</url-pattern>
 </servlet-mapping>
 </web-app>

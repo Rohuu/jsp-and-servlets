@@ -13,6 +13,8 @@ public class XmlServlet extends HttpServlet {
 	// get method shows parameters in URL only
 	// what if too many parameters(tooLengthyURL), what if password is also a parameter(notSecure)
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// HTTP is a stateless protocol
+		// means if we made a request with some parameters then when we will again make a request then there is no way that the application or the servlet remembers the earliar parameters 
 		response.setContentType("text/html");
 		PrintWriter printWriter=response.getWriter();
 		String userName=request.getParameter("userName");
