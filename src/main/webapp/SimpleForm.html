@@ -4,12 +4,29 @@
 <meta charset="ISO-8859-1">
 </head>
 <body>
+<li>
 1.  We have to create form in order to execute a POST request to give parameters
 2.  Then create method doPost 
 3.  If more parameters are to be entered then we have to input here...
-<form method="post" action="xmliServletPath">
-	<input name="userName" />
-	<input type="submit" /> 
+</li><br>
+<form method="post" action="xmlServletPath">
+		User-Name: 
+		<input name="userName" />
+		Full-Name: 
+		<input name="fullName" />
+		<br>
+		Profession:
+		<input type="radio" name="profession" value="developer">Developer</input>
+		<input type="radio" name="profession" value="architect">Architect</input>
+		<br>
+		<select name="location" multiple size=3>
+		<option value="here">here</option>
+		<option value="there">there</option>
+		<option value="far">far</option>
+		<option value="near">near</option>
+		<option value="nowhere">nowhere</option>
+		</select>
+		<input type="submit" /> 
 </form>  
 </body>
 </html>
