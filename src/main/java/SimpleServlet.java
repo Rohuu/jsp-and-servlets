@@ -2,6 +2,7 @@
 
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebInitParam;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -15,7 +16,9 @@ import java.io.PrintWriter;
  * Servlet implementation class SimpleServlet
  */
 
-@WebServlet(description="SimpleServlet", urlPatterns= {"/SimpleServletPath"})
+@WebServlet(description="SimpleServlet", urlPatterns= {"/SimpleServletPath"},
+			initParams= {@WebInitParam(name="defaultUser", value="johnny")})  // configuring parameters in annotations
+
 public class SimpleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -40,7 +43,8 @@ public class SimpleServlet extends HttpServlet {
 		// session object helps us to remember parameter till one browser/user only whereas context object helps us remember parameter values across different browsers/users.
 		// but it will remember that parameter in that particular browser only, if we try that url/code/application in any other browser then that browser will have no memory of its previous record
 		// in order to make application remember the parameter irrespective of the browser, we have to use context object
-		writer.println("Context parameter has username as "+ (String) context.getAttribute("savedUserName"));		
+		writer.println("Context parameter has username as "+ (String) context.getAttribute("savedUserName"));	
+		writer.println("init parameter has default username as "+ getServletConfig().getInitParameter("defaultUser"));
 	}
 
 }
