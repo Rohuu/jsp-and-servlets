@@ -2,15 +2,11 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
   <display-name>FirstServletExample</display-name>
 <servlet>
-<servlet-name>SimpleServlet</servlet-name>
-<servlet-class>SimpleServlet</servlet-class>
-<init-param>
-<param-name>defaultName</param-name>
-<param-value>John</param-value>
-</init-param>
+<servlet-name>SimpleForm</servlet-name>
+<servlet-class>SimpleForm</servlet-class>
 </servlet>
 <servlet-mapping> 
-<servlet-name>SimpleServlet</servlet-name>
-<url-pattern>/SimpleServletPath</url-pattern>
+<servlet-name>SimpleForm</servlet-name>
+<url-pattern>/SimpleFormPath</url-pattern>
 </servlet-mapping>
 </web-app>
