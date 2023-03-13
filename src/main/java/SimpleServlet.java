@@ -16,8 +16,8 @@ import java.io.PrintWriter;
  * Servlet implementation class SimpleServlet
  */
 
-@WebServlet(description="SimpleServlet", urlPatterns= {"/SimpleServletPath"},
-			initParams= {@WebInitParam(name="defaultUser", value="johnny")})  // configuring parameters in annotations
+@WebServlet(description="SimpleServlet", urlPatterns= {"/SimpleServletPath"})
+//			, initParams= {@WebInitParam(name="defaultUser", value="johnny")})  // configuring parameters in annotations
 
 public class SimpleServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
