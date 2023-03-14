@@ -9,6 +9,8 @@
 </head>
 <body>
 
-The Date and Time is: <%=new Date() %>
+The Date and Time is: <%=new Date()
+// its import will be added in page directives above
+%>
 </body>
 </html>
