@@ -8,7 +8,9 @@
 <title>Clock</title>
 </head>
 <body>
-
+<%@ include file="/Hello.jsp" %>
+<% // include keyword includes the mentioned file to the file where include tag is written %>
+<br>
 The Date and Time is: <%=new Date()
 // its import will be added in page directives above
 %>
